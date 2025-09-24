@@ -13,6 +13,7 @@ final class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder('slack_api');
 
+        // @phpstan-ignore-next-line
         $treeBuilder->getRootNode()
             ->children()
                 ->scalarNode('token')->end()
