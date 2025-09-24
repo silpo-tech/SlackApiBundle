@@ -1,0 +1,5 @@
+slack_api:
+  token: 'test-token'
+  options:
+    allow_private_channels: false
+    allow_public_channels: true

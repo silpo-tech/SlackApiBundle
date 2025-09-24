@@ -1,0 +1,44 @@
+{
+    "name": "silpo-tech/slack-api-bundle",
+    "type": "library",
+    "description": "Symfony Bundle for interaction with Slack API",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.3",
+        "symfony/dependency-injection": "^6.4 || ^7.0",
+        "symfony/http-client": "^6.4 || ^7.0",
+        "symfony/config": "^6.4 || ^7.0",
+        "jolicode/slack-php-api": "^4.6",
+        "nyholm/psr7": "^1.8",
+        "ramsey/uuid": "^4.7",
+        "symfony/http-kernel": "^6.4 || ^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SlackApiBundle\\": "src/",
+            "SlackApiBundle\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin",
+        "symfony/runtime": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "require-dev": {
+        "php-solution/sf-functional-test": "^6.0",
+        "phpstan/phpstan": "^2.0",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    },
+    "scripts": {
+        "test:coverage": {
+            "command": "APP_ENV=test php -d extension=pcov.so -d pcov.enabled=1 bin/phpunit --colors=never --coverage-clover reports/coverage/clover.xml --log-junit reports/junit.xml"
+        },
+        "test:run": [
+            "APP_ENV=test php bin/phpunit --color=always"
+        ]
+    }
+}
