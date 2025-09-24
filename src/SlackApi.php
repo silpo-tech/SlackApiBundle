@@ -90,8 +90,8 @@ final class SlackApi
     private function recursiveGetChannelByName(
         string $scopes,
         string $channelName,
-        string|null $cursor = null,
-    ): ObjsConversation|null {
+        ?string $cursor = null,
+    ): ?ObjsConversation {
         $options = ['types' => $scopes];
         if (null !== $cursor) {
             $options['cursor'] = $cursor;
@@ -127,7 +127,7 @@ final class SlackApi
         );
     }
 
-    public function getChannelConversationByName(string $channelName): ObjsConversation|null
+    public function getChannelConversationByName(string $channelName): ?ObjsConversation
     {
         if (isset($this->cache[$channelName])) {
             return $this->cache[$channelName];

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace SlackApiBundle\Tests\TestCase\Integration\DependencyInjection;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use SlackApiBundle\SlackApiBundle;
 use SlackApiBundle\SlackApiOptions;
 use SlackApiBundle\Tests\Kernel;
-use PHPUnit\Framework\Attributes\DataProvider;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -58,7 +58,7 @@ class ConfigurationTest extends KernelTestCase
     {
         yield 'config options' => [
             'configs' => [
-                __DIR__ . '/../../../Resources/config/packages/slack_api.yaml',
+                __DIR__.'/../../../Resources/config/packages/slack_api.yaml',
             ],
             'bundles' => [SlackApiBundle::class],
             'expected' => [

@@ -25,7 +25,7 @@ class Kernel extends HttpKernel
         parent::__construct($environment, $debug);
 
         $this->addTestBundle(FrameworkBundle::class);
-        $this->addTestConfig(__DIR__ . '/Resources/config/framework.yaml');
+        $this->addTestConfig(__DIR__.'/Resources/config/framework.yaml');
     }
 
     public function addTestBundle(string $bundleClassName): void
@@ -40,17 +40,17 @@ class Kernel extends HttpKernel
 
     public function getConfigDir(): string
     {
-        return $this->getProjectDir() . '/src/Resources/config';
+        return $this->getProjectDir().'/src/Resources/config';
     }
 
     public function getCacheDir(): string
     {
-        return __DIR__ . '/../var/cache/' . $this->getEnvironment();
+        return __DIR__.'/../var/cache/'.$this->getEnvironment();
     }
 
     public function getLogDir(): string
     {
-        return __DIR__ . '/../var/log';
+        return __DIR__.'/../var/log';
     }
 
     protected function configureContainer(ContainerConfigurator $container, $loader): void
