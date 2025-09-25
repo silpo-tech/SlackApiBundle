@@ -1,4 +1,4 @@
-# Rest Bundle for Symfony Framework #
+# Slack API Bundle for Symfony Framework #
 
 [![CI](https://github.com/silpo-tech/SlackApiBundle/actions/workflows/ci.yml/badge.svg)](https://github.com/silpo-tech/SlackApiBundle/actions)
 [![codecov](https://codecov.io/gh/silpo-tech/SlackApiBundle/graph/badge.svg)](https://codecov.io/gh/silpo-tech/SlackApiBundle)
